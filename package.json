@@ -1,0 +1,54 @@
+{
+  "name": "dsh-plugin-text-quote-en",
+  "version": "0.3.0",
+  "description": "Codex/Cursor-style text annotation and native side chat for DeepSeek Harness conversations, English labels. Select text to annotate it or ask about it in a forked side chat in the right sidebar. Local English fork of dsh-plugin-text-quote.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "annotation",
+    "quote",
+    "notes",
+    "composer",
+    "side-chat",
+    "fork"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "jmarceno",
+    "note": "English fork of dsh-plugin-text-quote by sunnystarye-ui"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

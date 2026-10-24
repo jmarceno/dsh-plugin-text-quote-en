@@ -1,0 +1,5 @@
+# dsh-plugin-text-quote-en bundle patch: self-insert so the loader enables the
+# plugin row when this package is added to a profile (dsh plugin add).
+- insert:
+    - id: dsh-plugin-text-quote-en
+      name: 'dsh-plugin-text-quote-en'
